@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const EmailSender = () => {
   const router = useRouter();
@@ -78,6 +79,11 @@ const EmailSender = () => {
         </div>
         {status && <p className="text-green-600 mt-4">{status}</p>}
         {error && <p className="text-red-600 mt-4">{error}</p>}
+        <Link href="/dashboard/home">
+        <center><h2 className="text-blue-600 hover:underline mb-4 block">
+          &larr; Back to Home
+        </h2></center>
+      </Link>
       </form>
     </div>
   );

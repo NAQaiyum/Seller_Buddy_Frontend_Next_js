@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from "next/link";
 
 const ImageUploadPage = () => {
   const [images, setImages] = useState([]);
@@ -104,7 +105,13 @@ const ImageUploadPage = () => {
           </div>
         ))}
       </div>
-    {/* </div> */}
+      {/* Add a back button */}
+      <Link href="/dashboard/home">
+        <center><h2 className="text-blue-600 hover:underline mb-4 block">
+          &larr; Back to Home
+        </h2></center>
+      </Link>
+    
     </div>
   );
 };
